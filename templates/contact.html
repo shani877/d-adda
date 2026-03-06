@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="container section page-head reveal">
+    <p class="eyebrow">Contact</p>
+    <h1>Let's Build Your Next DevOps Win</h1>
+    <p>Drop your details and we will reach out with a game plan.</p>
+</section>
+
+<section class="container section contact-wrap">
+    <form method="POST" class="glass contact-form reveal" novalidate>
+        {{ form.hidden_tag() }}
+
+        <label for="name">Name</label>
+        {{ form.name(id='name', placeholder='Aarav Sharma') }}
+        {% for error in form.name.errors %}
+            <small class="error">{{ error }}</small>
+        {% endfor %}
+
+        <label for="email">Email</label>
+        {{ form.email(id='email', placeholder='you@company.com') }}
+        {% for error in form.email.errors %}
+            <small class="error">{{ error }}</small>
+        {% endfor %}
+
+        <label for="message">Message</label>
+        {{ form.message(id='message', rows='6', placeholder='Tell us about your infra, pain points, and goals...') }}
+        {% for error in form.message.errors %}
+            <small class="error">{{ error }}</small>
+        {% endfor %}
+
+        <button type="submit" class="btn btn-lg">Send Message</button>
+    </form>
+</section>
+{% endblock %}

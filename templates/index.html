@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero container section">
+    <div class="hero-copy reveal">
+        <p class="eyebrow">DevOps Adda for teams that move fast</p>
+        <h1>
+            We build <span class="gradient-text" id="typed-text" data-words='["CI/CD flows", "Kubernetes platforms", "Cloud systems", "Secure pipelines"]'></span>
+        </h1>
+        <p class="hero-tagline">Deploying vibes. Scaling dreams.</p>
+        #<p class="hero-tagline">smart one choose DevOps with us</p>
+        <a href="{{ url_for('contact') }}" class="btn btn-lg">Book a Call</a>
+    </div>
+    <div class="hero-card glass reveal">
+        <h3>Pipeline Health</h3>
+        <p>99.98% uptime across managed client systems.</p>
+        <div class="pulse-dot"></div>
+    </div>
+</section>
+
+<section class="container section">
+    <div class="stats-grid">
+        <article class="stat-card glass reveal">
+            <h3><span class="counter" data-target="120">0</span>+</h3>
+            <p>Automated Deployments / Day</p>
+        </article>
+        <article class="stat-card glass reveal">
+            <h3><span class="counter" data-target="40">0</span>%</h3>
+            <p>Faster Release Cycles</p>
+        </article>
+        <article class="stat-card glass reveal">
+            <h3><span class="counter" data-target="24">0</span>/7</h3>
+            <p>Monitoring Coverage</p>
+        </article>
+    </div>
+</section>
+
+<section class="container section">
+    <h2 class="section-title reveal">Services Snapshot</h2>
+    <div class="cards-grid">
+        <article class="service-card glass reveal"><h3>CI/CD</h3><p>No drama deploys. Just smooth shipping.</p></article>
+        <article class="service-card glass reveal"><h3>Kubernetes</h3><p>Clusters tuned to scale without chaos.</p></article>
+        <article class="service-card glass reveal"><h3>DevSecOps</h3><p>Security baked in, not bolted on.</p></article>
+    </div>
+</section>
+
+<section class="container section">
+    <h2 class="section-title reveal">What Teams Say</h2>
+    <div class="cards-grid testimonials">
+        <blockquote class="glass reveal">"They turned our release anxiety into release confidence." <cite>- Product Lead</cite></blockquote>
+        <blockquote class="glass reveal">"From zero automation to full CI/CD in weeks." <cite>- Engineering Manager</cite></blockquote>
+        <blockquote class="glass reveal">"Observability game went from blurry to crystal clear." <cite>- CTO</cite></blockquote>
+    </div>
+</section>
+{% endblock %}
