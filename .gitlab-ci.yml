@@ -8,7 +8,7 @@ variables:
   COMPOSE_FILE: docker-compose.yml
   DOCKER_DRIVER: overlay2
   DOCKER_TLS_CERTDIR: ""
-  REGISTRY: registry.gitlab.sofmen.com
+  REGISTRY: your_registry_name
   PROJECT_NAME: ${CI_PROJECT_NAME}
   GROUP_NAME: ${CI_PROJECT_NAMESPACE}
   backend_project_name: ${CI_PROJECT_NAME}
@@ -221,3 +221,4 @@ deploy:
         cp /root/${backend_project_name}/nginx.conf /etc/nginx/sites-enabled/${GROUP_NAME}-${backend_project_name} || true &&
         nginx -s reload || true
       "
+
