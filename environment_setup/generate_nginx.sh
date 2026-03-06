@@ -117,16 +117,16 @@ fi
 # Determine domain based on environment
 case $ENVIRONMENT in
     dev)
-        DOMAIN="${PROJECT_NAME}.dev.sofmen.com"
+        DOMAIN="${PROJECT_NAME}.dev.company.com"
         ;;
     staging)
-        DOMAIN="${PROJECT_NAME}.stg.sofmen.com"
+        DOMAIN="${PROJECT_NAME}.stg.company.com"
         ;;
     master|main)
-        DOMAIN="${PROJECT_NAME}.sofmen.com"
+        DOMAIN="${PROJECT_NAME}.company.com"
         ;;
     *)
-        DOMAIN="${PROJECT_NAME}.${ENVIRONMENT}.sofmen.com"
+        DOMAIN="${PROJECT_NAME}.${ENVIRONMENT}.company.com"
         ;;
 esac
 
@@ -190,4 +190,5 @@ else
 fi
 
 echo "[DEBUG] Using BACKEND_PORT: $BACKEND_PORT"
+
 print_success "Nginx configuration generation completed!"
