@@ -9,8 +9,9 @@ services:
       - "${BACKEND_PORT}:8000"
     restart: unless-stopped
     networks:
-      - sofmen-docker-network
+      - docker-network
 
 networks:
-  sofmen-docker-network:
+  docker-network:
     external: true
+
